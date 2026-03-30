@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "skills": {
+    "asymmetric-screener": {
+      "source": "outman337/skills",
+      "sourceType": "github",
+      "computedHash": "d532eb06aef4ae4c8839dd226133f7d7722d272769d2a8e7d2242e251bc56ff6"
+    },
+    "asymmetric-validator": {
+      "source": "outman337/skills",
+      "sourceType": "github",
+      "computedHash": "7e054479596bf8b42eeaa6d5c4a9547c92ad2b1b4151654106adad6f409fcd0f"
+    }
+  }
+}
