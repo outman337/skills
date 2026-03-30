@@ -1,108 +1,104 @@
-# Asymmetric Investing Skills
+# Skills
 
-美股不对称投资 Skills 共享仓库 | Asymmetric Stock Investing Skills for Claude
-
-两个配套 Skill，专为**不对称投资框架**设计——低估值地板、高增速、热门赛道的三条腿逻辑。
+[中文](#中文) | [English](#english)
 
 ---
 
-## 📦 Skills 列表
+## 中文
 
-### 1. `asymmetric-screener` — 不对称机会猎手
+> ⚠️ **免责声明**：本项目仅供教育和学习使用，不构成任何投资建议。投资有风险，请在做出任何投资决策前自行研究并咨询专业顾问。
 
-**主动扫描美股市场，发现被错误定价的高不对称性投资机会。**
+为 Claude 打造的投资分析 Skills 集合，专注**不对称投资框架**——用系统化方法发现和验证被市场错误定价的机会。
 
-无需提供 ticker，Skill 自己去网上搜索候选，按"三条腿的凳子"框架筛选，生成带可视化评分卡的候选报告。
+### 可用 Skills
 
-**触发方式：**
-> "找机会" / "扫一下" / "有什么新机会" / "find asymmetric setups" / "最近有什么好票"
+#### 📈 投资分析
 
-**输出包括：**
-- 市场环境速写（哪些板块热、资金流向）
-- 5-8 个候选的可视化 card（P/S 同行对比条、均值回归数学、不对称评分）
-- 最值得 Deep Dive 的优先级建议
+| Skill | 描述 |
+|-------|------|
+| [asymmetric-screener](./skills/asymmetric-screener) | 主动扫描美股市场，发现被错误定价的高不对称性投资机会。无需提供 ticker，自动搜索候选并生成可视化评分报告。 |
+| [asymmetric-validator](./skills/asymmetric-validator) | 输入一个 ticker，按"三条腿的凳子"框架快速验证，给出 PASS / BORDERLINE / FAIL 判定。 |
 
-**安装：**
+### 安装方式
+
+#### 方式一：npx 安装（推荐）
+
+安装全部 Skills：
 ```
-/install-skill https://github.com/outman337/asymmetric-investing-skills/raw/main/asymmetric-screener.skill
+npx skills add outman337/skills
+```
+
+安装单个 Skill：
+```
+npx skills add outman337/skills --skill asymmetric-screener
+npx skills add outman337/skills --skill asymmetric-validator
+```
+
+#### 方式二：Claude.ai 网页端
+
+1. 打开 **设置 > 功能** 并启用**代码执行与文件创建**
+2. 进入对应 skill 文件夹，下载 `SKILL.md`
+3. 在 Claude 中进入 **自定义 > Skills**
+4. 点击 **+** 上传文件即可
+
+#### 方式三：URL 直接安装
+
+```
+/install-skill https://github.com/outman337/skills/raw/main/skills/asymmetric-screener/SKILL.md
+```
+
+```
+/install-skill https://github.com/outman337/skills/raw/main/skills/asymmetric-validator/SKILL.md
 ```
 
 ---
 
-### 2. `asymmetric-validator` — 不对称验证器
+## English
 
-**输入一个 ticker，快速判定是否符合不对称投资框架，给出 PASS / BORDERLINE / FAIL。**
+> ⚠️ **Disclaimer**: This project is for educational and informational purposes only. Nothing here constitutes financial advice. Always do your own research and consult a qualified financial advisor before making investment decisions.
 
-不做完整投研报告——只做框架验证，速度优先。
+A collection of Claude Skills for investment analysis, built around the **asymmetric investing framework** — a systematic approach to finding and validating mispriced opportunities.
 
-**触发方式：**
-> "验证 XXXX" / "XXXX 不对称吗" / "screen XXXX" / "跑一下 XXXX" / "XXXX passes?"
+### Available Skills
 
-**输出包括：**
-- 三条腿逐条验证（收入加速 / 估值地板 / 热门赛道）
-- EBITDA 转正催化检查
-- 同行估值对比表（可视化）
-- 最终判定卡片（PASS / BORDERLINE / FAIL）
-- 反向不对称检查（是否 priced for perfection）
+#### 📈 Investment Analysis
 
-**安装：**
+| Skill | Description |
+|-------|-------------|
+| [asymmetric-screener](./skills/asymmetric-screener) | Actively scans the US stock market to discover high-asymmetry investment opportunities. No ticker needed — the skill searches on its own and generates a scored visual report. |
+| [asymmetric-validator](./skills/asymmetric-validator) | Input a ticker and get a rapid PASS / BORDERLINE / FAIL verdict based on the "three-legged stool" asymmetric framework. |
+
+### Installation
+
+#### Option A — npx (recommended)
+
+Install all skills:
 ```
-/install-skill https://github.com/outman337/asymmetric-investing-skills/raw/main/asymmetric-validator.skill
-```
-
----
-
-## 🔧 安装方法
-
-### 方法一：URL 安装（推荐）
-
-在 Claude 对话中输入安装命令即可，两个 Skill 分别安装：
-
-```
-/install-skill https://github.com/outman337/asymmetric-investing-skills/raw/main/asymmetric-screener.skill
+npx skills add outman337/skills
 ```
 
+Install a specific skill:
 ```
-/install-skill https://github.com/outman337/asymmetric-investing-skills/raw/main/asymmetric-validator.skill
+npx skills add outman337/skills --skill asymmetric-screener
+npx skills add outman337/skills --skill asymmetric-validator
 ```
 
-### 方法二：手动下载安装
+#### Option B — Claude.ai Web / Desktop
 
-1. 从本仓库下载对应的 `.skill` 文件
-2. 在 Claude 对话中使用 `/install-skill` 命令并上传文件
+1. Go to **Settings > Capabilities** and enable **Code execution and file creation**
+2. Download the `SKILL.md` from the skill folder you want
+3. In Claude, go to **Customize > Skills**
+4. Click **+** and upload the file
 
----
+#### Option C — Direct URL install
 
-## 📐 核心框架：三条腿的凳子
+```
+/install-skill https://github.com/outman337/skills/raw/main/skills/asymmetric-screener/SKILL.md
+```
 
-每个候选必须同时满足三个条件：
-
-| 条件 | 标准 |
-|------|------|
-| **Leg 1 — 低估值地板** | P/S 低于同行中位数 40%+，提供下行保护 |
-| **Leg 2 — 收入加速** | 最近 1-2 季度 YoY ≥25%，TTM ≥$20M |
-| **Leg 3 — 热门赛道** | 近 3 个月板块资金净流入，市场关注度高 |
-
-**硬性排除：** Pre-revenue、现金跑道 <6 个月、市值 >$50B、P/S 高于同行
-
-**加分项：** 距首次 EBITDA 转正 ≤2 个季度、内部人净买入、具体可量化催化剂
-
----
-
-## 🔗 与其他 Skill 的衔接
-
-| Skill | 协同方式 |
-|-------|---------|
-| `asymmetric-screener` | 发现候选 → 传给 validator 快速过筛 |
-| `asymmetric-validator` | 验证通过 → 进入 equity-research 做完整 Deep Dive |
-
-典型工作流：**screener 扫描** → **validator 确认** → **equity-research 深研** → 决策
-
----
-
-## ⚠️ 免责声明
-
-本 Skill 生成的分析基于公开信息和模型推算，仅供研究参考，不构成投资建议。投资有风险，决策需谨慎。
+```
+/install-skill https://github.com/outman337/skills/raw/main/skills/asymmetric-validator/SKILL.md
+```
 
 ---
 
