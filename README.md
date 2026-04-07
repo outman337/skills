@@ -8,7 +8,7 @@
 
 > ⚠️ **免责声明**：本项目仅供教育和学习使用，不构成任何投资建议。投资有风险，请在做出任何投资决策前自行研究并咨询专业顾问。
 
-为 Claude 打造的投资分析 Skills 集合，专注**不对称投资框架**和**彼得林奇成长股框架**——用系统化方法发现和验证被市场错误定价的机会，以及寻找下一个十倍股。
+为 Claude 打造的投资分析 Skills 集合，专注**不对称投资框架**、**彼得林奇成长股框架**和 **Druckenmiller 叙事时钟**——用系统化方法发现和验证被市场错误定价的机会，寻找下一个十倍股，定位主题投资的时机窗口。
 
 ### 可用 Skills
 
@@ -20,6 +20,7 @@
 | [asymmetric-validator](./skills/asymmetric-validator) | 输入一个 ticker，按"三条腿的凳子"框架快速验证，给出 PASS / BORDERLINE / FAIL 判定。 |
 | [lynch-screener](./skills/lynch-screener) | 彼得林奇十倍股猎手——主动扫描美股市场，按林奇风格发现 Fast Grower 和 Stalwart 候选。专注无聊行业、被忽视的角落、低 PEG，按林奇六分类输出评分卡。 |
 | [lynch-validator](./skills/lynch-validator) | 彼得林奇验证器——输入一个 ticker，按林奇完整框架验证：六分类、二分钟独白、十三买入信号、十一红灯、PEG 估值、林奇式财务健康度，给出 PASS / WATCH / FAIL 判定。 |
+| [narrative-clock](./skills/narrative-clock) | Druckenmiller 36 个月叙事时钟——输入一个主题/趋势/故事（不是 ticker），按"从不信到信"周期定位它处于下注窗口/定性期/顺水期/过期的哪一阶段，附六维度交叉验证和 ASCII 时钟图。 |
 
 ### 安装方式
 
@@ -36,6 +37,7 @@ npx skills add outman337/skills --skill asymmetric-screener
 npx skills add outman337/skills --skill asymmetric-validator
 npx skills add outman337/skills --skill lynch-screener
 npx skills add outman337/skills --skill lynch-validator
+npx skills add outman337/skills --skill narrative-clock
 ```
 
 #### 方式二：Claude.ai 网页端
@@ -63,13 +65,17 @@ npx skills add outman337/skills --skill lynch-validator
 /install-skill https://github.com/outman337/skills/raw/main/skills/lynch-validator/SKILL.md
 ```
 
+```
+/install-skill https://github.com/outman337/skills/raw/main/skills/narrative-clock/SKILL.md
+```
+
 ---
 
 ## English
 
 > ⚠️ **Disclaimer**: This project is for educational and informational purposes only. Nothing here constitutes financial advice. Always do your own research and consult a qualified financial advisor before making investment decisions.
 
-A collection of Claude Skills for investment analysis, built around the **asymmetric investing framework** and the **Peter Lynch growth-stock framework** — systematic approaches to finding and validating mispriced opportunities and hunting for the next tenbagger.
+A collection of Claude Skills for investment analysis, built around the **asymmetric investing framework**, the **Peter Lynch growth-stock framework**, and the **Druckenmiller narrative clock** — systematic approaches to finding and validating mispriced opportunities, hunting for the next tenbagger, and timing thematic investments.
 
 ### Available Skills
 
@@ -81,6 +87,7 @@ A collection of Claude Skills for investment analysis, built around the **asymme
 | [asymmetric-validator](./skills/asymmetric-validator) | Input a ticker and get a rapid PASS / BORDERLINE / FAIL verdict based on the "three-legged stool" asymmetric framework. |
 | [lynch-screener](./skills/lynch-screener) | Peter Lynch tenbagger hunter — scans the US market for Fast Grower and Stalwart candidates in Lynch's style. Focused on boring industries, neglected corners, and low PEG, with scorecards organized by Lynch's six categories. |
 | [lynch-validator](./skills/lynch-validator) | Peter Lynch validator — input a ticker and run the full Lynch framework: six categories, two-minute monologue, thirteen buy signals, eleven red flags, PEG valuation, Lynch-style balance sheet check. Returns PASS / WATCH / FAIL. |
+| [narrative-clock](./skills/narrative-clock) | Druckenmiller 36-month narrative clock — input a theme/trend/story (not a ticker) and locate where it sits in the "disbelief → belief" cycle: Betting Window / Definition / Tailwind / Expired. Includes six-dimension cross-validation and an ASCII clock diagram. |
 
 ### Installation
 
@@ -97,6 +104,7 @@ npx skills add outman337/skills --skill asymmetric-screener
 npx skills add outman337/skills --skill asymmetric-validator
 npx skills add outman337/skills --skill lynch-screener
 npx skills add outman337/skills --skill lynch-validator
+npx skills add outman337/skills --skill narrative-clock
 ```
 
 #### Option B — Claude.ai Web / Desktop
@@ -122,6 +130,10 @@ npx skills add outman337/skills --skill lynch-validator
 
 ```
 /install-skill https://github.com/outman337/skills/raw/main/skills/lynch-validator/SKILL.md
+```
+
+```
+/install-skill https://github.com/outman337/skills/raw/main/skills/narrative-clock/SKILL.md
 ```
 
 ---
